@@ -11,8 +11,8 @@ import numpy as np
 from flask import Flask, request, jsonify, render_template
 import pickle
 
-model= pickle.load(open(r'C:\Users\egoeshu\Desktop\testingdoc\SMS Spam identifier NLP\model.pkl', 'rb'))
-tfidf= pickle.load(open(r'C:\Users\egoeshu\Desktop\testingdoc\SMS Spam identifier NLP\transform.pickle', 'rb'))
+model= pickle.load(open('model.pkl', 'rb'))
+tfidf= pickle.load(open('transform.pickle', 'rb'))
 app= Flask(__name__)
 
 @app.route('/')
