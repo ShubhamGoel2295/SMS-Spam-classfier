@@ -10,6 +10,9 @@ import pandas as pd
 import numpy as np
 from flask import Flask, request, jsonify, render_template
 import pickle
+from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.naive_bayes import MultinomialNB
+from sklearn.externals import joblib
 
 model= pickle.load(open('model.pkl', 'rb'))
 tfidf= pickle.load(open('transform.pickle', 'rb'))
